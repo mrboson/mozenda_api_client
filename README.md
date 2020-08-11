@@ -3,7 +3,7 @@
 Simple API wrapper for integration with Mozenda's REST API (https://help.mozenda.com/docs/rest-api-introduction).  This API can be used to start and stop
 agents (and their jobs), retrieve results, etc.
 
-Sample code would be fully functional with valid Mozenda API Keys and operational redis cluster.  So mainly this is just example code to show what a fully Mozenda API integrated client module would like.
+Sample code would be fully functional with valid Mozenda API Keys and operational redis cluster.  So mainly this is just example code to show what a Mozenda API integrated client module could like.
 
 Here is how it would typically be used:
 
