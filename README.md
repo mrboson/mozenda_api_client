@@ -8,6 +8,7 @@ Sample code would be fully functional with valid Mozenda API Keys and operationa
 Here is how it would typically be used:
 
 ```
+from celery import shared_task
 from mozenda import get_view_items, MozendaAPIError, get_xml_val, queue_task
 
 # Retrieve results from a single running agent's view
@@ -25,6 +26,7 @@ def get_results(view_id):
       yield item
 
 # Process multiple views in a batch, careful, this will potentially run faster than Mozenda's rate limit
+@shared_task
 def process_bunch_of_views(view_list):
   for view_id in view_list:
     results = get_results(view_id)
